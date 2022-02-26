@@ -10,6 +10,6 @@ To view the latest version of this document online, please use [this link](https
 
 ## Getting Started
 
-To get started, read the [introduction](introduction.md), or learn about [core concepts](chapter_1.md).
+To get started, begin by learning about [core concepts](welcome/concepts.md).
 
-If you want to get straight down to business, you can read about [creating](chapter_2.md) and [opening](chapter_3.md) projects.
+If you want to get straight down to business, you can read about [creating](projects/creating_a_project.md) and [opening](projects/opening_a_project.md) projects.

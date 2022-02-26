@@ -12,7 +12,7 @@
 
 # Editing Projects
 
-- [Navigating The Interface](projects/navigating_the_interface.md)
+- [Navigating The Interface](navigating_the_interface.md)
 - [World Options](projects/world_options.md)
 - [Commands](projects/commands.md)
 - [Zones](projects/zones.md)
