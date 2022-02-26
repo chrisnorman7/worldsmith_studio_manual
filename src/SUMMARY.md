@@ -2,7 +2,7 @@
 
 # Introduction
 
-- [Welcome](welcome/welcome.md)
+- [Welcome](index.md)
 - [Core Concepts](welcome/concepts.md)
 
 # Creating And Opening Projects
