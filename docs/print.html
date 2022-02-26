@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">2.</strong> Chapter 1: Core Concepts</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">3.</strong> Chapter 2: Creating A Project</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">4.</strong> Chapter 3: Opening A Project</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="welcome/welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="welcome/concepts.html"><strong aria-hidden="true">2.</strong> Core Concepts</a></li><li class="chapter-item expanded affix "><li class="part-title">Creating And Opening Projects</li><li class="chapter-item expanded "><a href="projects/creating_a_project.html"><strong aria-hidden="true">3.</strong> Creating A Project</a></li><li class="chapter-item expanded "><a href="projects/opening_a_project.html"><strong aria-hidden="true">4.</strong> Opening A Project</a></li><li class="chapter-item expanded affix "><li class="part-title">Editing Projects</li><li class="chapter-item expanded "><a href="projects/navigating_the_interface.html"><strong aria-hidden="true">5.</strong> Navigating The Interface</a></li><li class="chapter-item expanded "><a href="projects/world_options.html"><strong aria-hidden="true">6.</strong> World Options</a></li><li class="chapter-item expanded "><a href="projects/commands.html"><strong aria-hidden="true">7.</strong> Commands</a></li><li class="chapter-item expanded "><a href="projects/zones.html"><strong aria-hidden="true">8.</strong> Zones</a></li><li class="chapter-item expanded "><a href="projects/terrain_types.html"><strong aria-hidden="true">9.</strong> Terrain Types</a></li><li class="chapter-item expanded "><a href="projects/asset_stores.html"><strong aria-hidden="true">10.</strong> Asset Stores</a></li><li class="chapter-item expanded "><a href="projects/reverb_presets.html"><strong aria-hidden="true">11.</strong> Reverb Presets</a></li><li class="chapter-item expanded "><a href="projects/sound_settings.html"><strong aria-hidden="true">12.</strong> Sound Settings</a></li><li class="chapter-item expanded "><a href="projects/menus.html"><strong aria-hidden="true">13.</strong> Menus</a></li><li class="chapter-item expanded "><a href="projects/more.html"><strong aria-hidden="true">14.</strong> More</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendices</li><li class="chapter-item expanded "><a href="appendices/building_projects.html"><strong aria-hidden="true">15.</strong> Appendix 1: Building Projects</a></li><li class="chapter-item expanded "><a href="appendices/scripting.html"><strong aria-hidden="true">16.</strong> Appendix 2: Scripting</a></li><li class="chapter-item expanded "><a href="acknowledgements.html"><strong aria-hidden="true">17.</strong> Acknowledgements</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,47 +143,107 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+                        <div style="break-before: page; page-break-before: always;"></div><h1 id="welcome"><a class="header" href="#welcome">Welcome</a></h1>
 <p>Welcome to Worldsmith Studio, a fully GUI-based builder for RPG's.</p>
 <p>This manual will hopefully cover everything you need to know to create your own games with Worldsmith Studio.</p>
 <p>If you feel something is missing, needs clarification, or you have a suggestion, please feel free to submit an <a href="https://github.com/chrisnorman7/worldsmith_studio_manual/issues/new">issue</a>.</p>
 <p>To view the latest version of this document online, please use <a href="https://chrisnorman7.github.io/worldsmith_studio_manual/">this link</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
-<h2 id="outline"><a class="header" href="#outline">Outline</a></h2>
-<p>Worldsmith Studio is a fairly large program, and it will inevitably use terminology that is unfamiliar. To this end, this chapter attempts to introduce you to various <a href="chapter_1.html#concepts">concepts</a> used by the program.</p>
-<h2 id="concepts"><a class="header" href="#concepts">Concepts</a></h2>
-<h3 id="directory"><a class="header" href="#directory">Directory</a></h3>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<p>To get started, read the <a href="welcome/introduction.html">introduction</a>, or learn about <a href="welcome/chapter_1.html">core concepts</a>.</p>
+<p>If you want to get straight down to business, you can read about <a href="welcome/chapter_2.html">creating</a> and <a href="welcome/chapter_3.html">opening</a> projects.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="concepts"><a class="header" href="#concepts">Concepts</a></h1>
+<p>Worldsmith Studio is a fairly large program, and it will inevitably use terminology that is unfamiliar. To this end, this chapter attempts to introduce you to various <a href="welcome/concepts.html#concepts">concepts</a> used by the program.</p>
+<h2 id="directory"><a class="header" href="#directory">Directory</a></h2>
 <p>Computers use the words directory and folder interchangeably, to describe a section of your computer's filesystem where files and subdirectories or sub-folders are stored.</p>
 <p>Throughout this book, we will adopt the Mac OS X and *x terminology and use the word directory, despite Windows using the word Folder.</p>
-<h3 id="dart"><a class="header" href="#dart">Dart</a></h3>
+<h2 id="dart"><a class="header" href="#dart">Dart</a></h2>
 <p>Worldsmith Studio, as well as its accompanying package <a href="https://pub.dev/packages/worldsmith">worldsmith</a> are both written in <a href="https://dart.dev/">Dart</a>. This is a programming language created by Google.</p>
 <p>Any scripting of your game will also be done with Dart.</p>
-<h3 id="project"><a class="header" href="#project">Project</a></h3>
-<p>A project refers to the overall <a href="chapter_1.html#directory">directory</a> on your computer where your world file and assets are stored.</p>
+<h2 id="project"><a class="header" href="#project">Project</a></h2>
+<p>A project refers to the overall <a href="welcome/concepts.html#directory">directory</a> on your computer where your world file and assets are stored.</p>
 <p>A project consists of a few things:</p>
-<h4 id="project-file"><a class="header" href="#project-file">Project File</a></h4>
+<h3 id="project-file"><a class="header" href="#project-file">Project File</a></h3>
 <p>This is a single file which is stored as <a href="https://www.json.org/">JSON</a>. It holds the information about your world.</p>
 <p>You can open this file in any standard text editor, although you are entirely responsible for any damage to your project arising from making edits to it.</p>
-<h4 id="assets-directory"><a class="header" href="#assets-directory">Assets Directory</a></h4>
+<h3 id="assets-directory"><a class="header" href="#assets-directory">Assets Directory</a></h3>
 <p>This is the directory where your sound files will be encrypted and stored.</p>
 <p>It will contain sequentially numbered files and directories.</p>
-<h4 id="game-directory"><a class="header" href="#game-directory">Game Directory</a></h4>
-<p>If you have used the <code>worldsmith build</code> command, you will additionally have a game directory, where generated <a href="chapter_1.html#dart">source code</a> will reside.</p>
+<h3 id="game-directory"><a class="header" href="#game-directory">Game Directory</a></h3>
+<p>If you have used the <code>worldsmith build</code> command, you will additionally have a game directory, where generated <a href="welcome/concepts.html#dart">source code</a> will reside.</p>
 <p>If you are running under Windows, this directory will also contain a .exe file which you can use to play your game without needing Dart installed.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-2-creating-a-project"><a class="header" href="#chapter-2-creating-a-project">Chapter 2: Creating A Project</a></h1>
+<h2 id="world"><a class="header" href="#world">World</a></h2>
+<p>A world is the game you are creating. This includes all <a href="welcome/../projects/settings/../zones.html">zones</a>, and <a href="welcome/../projects/commands.html">commands</a>.</p>
+<h2 id="asset-store"><a class="header" href="#asset-store">Asset Store</a></h2>
+<p>An asset store is like a directory. It contains 0 or more <a href="welcome/concepts.html#assets">assets</a>.</p>
+<p>Worldsmith defines several asset stores which are used for specific things in your world. You can read more about these in the <a href="welcome/../projects/asset_stores.html">asset stores</a> section.</p>
+<h2 id="assets"><a class="header" href="#assets">Assets</a></h2>
+<p>An asset is an encrypted file which you can use in your world.</p>
+<p>Assets are stored in <a href="welcome/concepts.html#asset-store">asset stores</a>.</p>
+<p>They can represent either a single file or a directory.</p>
+<p>Each asset is encrypted using Dart's <a href="https://pub.dev/packages/encrypt">encrypt</a> package, and each one uses a randomly generated encryption key, so no two are the same.</p>
+<p>Please note that while Worldsmith Studio does encrypt assets, no guarantees are given about the security of any assets you bundle with your <a href="welcome/concepts.html#world">world</a>. The encryption keys for all assets are stored in plain text in your <a href="welcome/concepts.html#project-file">project file</a>, and the encryption key for the encrypted world file is stored in plain text in the generated <a href="welcome/concepts.html#game-directory">source code</a>. As such, if you give either the project file, or the generated source code to another person, they will be able to decrypt your world and its assets.</p>
+<p>Worldsmith Studio attempts to mitigate this by generating a new encryption key and re-encrypting your world file every time you build your world, but you are fully responsible for any content created with this program.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-project"><a class="header" href="#creating-a-project">Creating A Project</a></h1>
 <p>When you run Worldsmith Studio for the first time, you will see a screen with buttons for creating and opening projects.</p>
-<p><img src="images/no_project.png" alt="A screenshot of Worldsmith Studio with no recently-opened projects." /></p>
+<p><img src="projects/images/no_project.png" alt="A screenshot of Worldsmith Studio with no recently-opened projects." /></p>
 <p>To create a project, you can click the &quot;Create Project&quot; button, or use the keyboard shortcut Control + N. You will see an appropriate dialogue for creating a file on your operating system.</p>
-<p><img src="images/create_project_dialogue.png" alt="A screenshot showing a &quot;Create Project&quot; dialogue with a filename of project.json." /></p>
+<p><img src="projects/images/create_project_dialogue.png" alt="A screenshot showing a &quot;Create Project&quot; dialogue with a filename of project.json." /></p>
 <p>It is recommended that you stick with the default filename <code>project.json</code>, but this is not enforced. Also, you can safely rename your project file any time it is not open in Worldsmith Studio.</p>
 <p>When you have selected a directory, and given your project a filename, you will be taken to the project settings for your new project.</p>
-<p><img src="images/newly_created_project.png" alt="A screenshot showing Worldsmith Studio's project settings. The title of the world is &quot;Untitled World&quot;." /></p>
+<p><img src="projects/images/newly_created_project.png" alt="A screenshot showing Worldsmith Studio's project settings. The title of the world is &quot;Untitled World&quot;." /></p>
 <p>If you want to close your project and return to the main menu, you can click the back button, or press Control + W.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-3-opening-a-project"><a class="header" href="#chapter-3-opening-a-project">Chapter 3: Opening A Project</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="opening-a-project"><a class="header" href="#opening-a-project">Opening A Project</a></h1>
 <p>When a project has been created, the main menu of Worldsmith Studio will change to show a list of recently-opened projects.</p>
-<p><img src="images/recent_projects.png" alt="The Worldsmith Studio main menu showing a recently-opened project with the path C:\Users\chris\src\RPG\project.json." /></p>
+<p><img src="projects/images/recent_projects.png" alt="The Worldsmith Studio main menu showing a recently-opened project with the path C:\Users\chris\src\RPG\project.json." /></p>
 <p>It is worth noting that this list will only include files which still exist. If you move or rename a file before this list loads, it will not show up.</p>
 <p>You can click any of these files to open them, or choose a file from somewhere else by clicking the &quot;Open Project&quot; button or pressing Control + O.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="navigating-the-interface"><a class="header" href="#navigating-the-interface">Navigating The Interface</a></h1>
+<p>Worldsmith Studio has a lot of different screens. Every attempt has been made to ensure easy and consistent navigation across the different parts of the interface.</p>
+<p>If you find this not to be the case, please submit an issue.</p>
+<h2 id="tabbed-screens"><a class="header" href="#tabbed-screens">Tabbed Screens</a></h2>
+<p>Many screens - most notably the main project screen - use tabs to provide an overview and context. You can navigate through these types of screens in several ways:</p>
+<h3 id="mouse-or-keyboard"><a class="header" href="#mouse-or-keyboard">Mouse Or Keyboard</a></h3>
+<p>You can click on the tabs at the bottom of the screen to move to a different tab.</p>
+<p>If you are using a keyboard, the left and right arrow keys also work to focus the different tabs, and the enter or space bar keys will select.</p>
+<h3 id="control--tab"><a class="header" href="#control--tab">Control + Tab</a></h3>
+<p>You can use the key combination Control + Tab to navigate to the next tab, or Control + Shift + Tab to navigate to the previous one.</p>
+<p>This key combination will wrap around to the first tab when used in the last tab, and Control + Shift + Tab does the opposite.</p>
+<h3 id="control--numbers"><a class="header" href="#control--numbers">Control + Numbers</a></h3>
+<p>You can use the Control key in combination with the number row to move to the different tabs.</p>
+<p>For example, if you had three tabs, &quot;First&quot;, &quot;Seconds&quot;, and &quot;Third&quot;, Control + 1 would move you to the &quot;First&quot; tab, Control + 2 to the &quot;Second&quot;, and Control + 3 to the &quot;Third&quot;.</p>
+<p>This works all the way up to Control + 9 for the ninth tab, and Control + 0 for the tenth.</p>
+<h2 id="numerical-controls"><a class="header" href="#numerical-controls">Numerical Controls</a></h2>
+<p>When a number is displayed, such as when setting the frames per second for your world, you can use the equals (=) key to increase the number, and the dash (-) to decrease.</p>
+<p>How much these keys affect the value is dependant on the number being shown. For example, with frames per second, equals doubles the number, while dash halves it.</p>
+<h2 id="coordinates"><a class="header" href="#coordinates">Coordinates</a></h2>
+<p>If a set of coordinates is displayed, quite often you can use alt and the arrow keys to adjust the value.</p>
+<ul>
+<li>Alt + Up Arrow: Increase the y axis (move north).</li>
+<li>Alt + Right Arrow: Increase the x axis (move east).</li>
+<li>Alt + Down Arrow: Decrease the y axis (move south).</li>
+<li>Alt + Left Arrow: Decrease the x axis (move west).</li>
+</ul>
+<h2 id="zone-movement"><a class="header" href="#zone-movement">Zone Movement</a></h2>
+<p>When editing <a href="projects/../projects/zones.html">zones</a>, you can move through the zone when you are focussed on the coordinates in the Canvas tab (Control + 2) by pressing control and the arrow keys.</p>
+<ul>
+<li>Control + Up Arrow: Move north.</li>
+<li>Control + Right Arrow: Move east.</li>
+<li>Control + Down Arrow: Move south.</li>
+<li>Control + Left Arrow: Move West.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="world-options"><a class="header" href="#world-options">World Options</a></h1>
+<p>The world</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="commands"><a class="header" href="#commands">Commands</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zones"><a class="header" href="#zones">Zones</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="terrain-types"><a class="header" href="#terrain-types">Terrain Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="asset-stores"><a class="header" href="#asset-stores">Asset Stores</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reverb-presets"><a class="header" href="#reverb-presets">Reverb Presets</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sound-settings"><a class="header" href="#sound-settings">Sound Settings</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="menus"><a class="header" href="#menus">Menus</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="more"><a class="header" href="#more">More</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix-1-building-projects"><a class="header" href="#appendix-1-building-projects">Appendix 1: Building Projects</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix-2-scripting"><a class="header" href="#appendix-2-scripting">Appendix 2: Scripting</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="acknowledgements"><a class="header" href="#acknowledgements">Acknowledgements</a></h1>
 
                     </main>
 
@@ -202,6 +262,20 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

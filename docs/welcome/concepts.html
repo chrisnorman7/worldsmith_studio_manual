@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Core Concepts - The Worldsmith Studio Manual</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../welcome/welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="../welcome/concepts.html" class="active"><strong aria-hidden="true">2.</strong> Core Concepts</a></li><li class="chapter-item expanded affix "><li class="part-title">Creating And Opening Projects</li><li class="chapter-item expanded "><a href="../projects/creating_a_project.html"><strong aria-hidden="true">3.</strong> Creating A Project</a></li><li class="chapter-item expanded "><a href="../projects/opening_a_project.html"><strong aria-hidden="true">4.</strong> Opening A Project</a></li><li class="chapter-item expanded affix "><li class="part-title">Editing Projects</li><li class="chapter-item expanded "><a href="../projects/navigating_the_interface.html"><strong aria-hidden="true">5.</strong> Navigating The Interface</a></li><li class="chapter-item expanded "><a href="../projects/world_options.html"><strong aria-hidden="true">6.</strong> World Options</a></li><li class="chapter-item expanded "><a href="../projects/commands.html"><strong aria-hidden="true">7.</strong> Commands</a></li><li class="chapter-item expanded "><a href="../projects/zones.html"><strong aria-hidden="true">8.</strong> Zones</a></li><li class="chapter-item expanded "><a href="../projects/terrain_types.html"><strong aria-hidden="true">9.</strong> Terrain Types</a></li><li class="chapter-item expanded "><a href="../projects/asset_stores.html"><strong aria-hidden="true">10.</strong> Asset Stores</a></li><li class="chapter-item expanded "><a href="../projects/reverb_presets.html"><strong aria-hidden="true">11.</strong> Reverb Presets</a></li><li class="chapter-item expanded "><a href="../projects/sound_settings.html"><strong aria-hidden="true">12.</strong> Sound Settings</a></li><li class="chapter-item expanded "><a href="../projects/menus.html"><strong aria-hidden="true">13.</strong> Menus</a></li><li class="chapter-item expanded "><a href="../projects/more.html"><strong aria-hidden="true">14.</strong> More</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendices</li><li class="chapter-item expanded "><a href="../appendices/building_projects.html"><strong aria-hidden="true">15.</strong> Appendix 1: Building Projects</a></li><li class="chapter-item expanded "><a href="../appendices/scripting.html"><strong aria-hidden="true">16.</strong> Appendix 2: Scripting</a></li><li class="chapter-item expanded "><a href="../acknowledgements.html"><strong aria-hidden="true">17.</strong> Acknowledgements</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Worldsmith Studio Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="concepts"><a class="header" href="#concepts">Concepts</a></h1>
+<p>Worldsmith Studio is a fairly large program, and it will inevitably use terminology that is unfamiliar. To this end, this chapter attempts to introduce you to various <a href="#concepts">concepts</a> used by the program.</p>
+<h2 id="directory"><a class="header" href="#directory">Directory</a></h2>
+<p>Computers use the words directory and folder interchangeably, to describe a section of your computer's filesystem where files and subdirectories or sub-folders are stored.</p>
+<p>Throughout this book, we will adopt the Mac OS X and *x terminology and use the word directory, despite Windows using the word Folder.</p>
+<h2 id="dart"><a class="header" href="#dart">Dart</a></h2>
+<p>Worldsmith Studio, as well as its accompanying package <a href="https://pub.dev/packages/worldsmith">worldsmith</a> are both written in <a href="https://dart.dev/">Dart</a>. This is a programming language created by Google.</p>
+<p>Any scripting of your game will also be done with Dart.</p>
+<h2 id="project"><a class="header" href="#project">Project</a></h2>
+<p>A project refers to the overall <a href="#directory">directory</a> on your computer where your world file and assets are stored.</p>
+<p>A project consists of a few things:</p>
+<h3 id="project-file"><a class="header" href="#project-file">Project File</a></h3>
+<p>This is a single file which is stored as <a href="https://www.json.org/">JSON</a>. It holds the information about your world.</p>
+<p>You can open this file in any standard text editor, although you are entirely responsible for any damage to your project arising from making edits to it.</p>
+<h3 id="assets-directory"><a class="header" href="#assets-directory">Assets Directory</a></h3>
+<p>This is the directory where your sound files will be encrypted and stored.</p>
+<p>It will contain sequentially numbered files and directories.</p>
+<h3 id="game-directory"><a class="header" href="#game-directory">Game Directory</a></h3>
+<p>If you have used the <code>worldsmith build</code> command, you will additionally have a game directory, where generated <a href="#dart">source code</a> will reside.</p>
+<p>If you are running under Windows, this directory will also contain a .exe file which you can use to play your game without needing Dart installed.</p>
+<h2 id="world"><a class="header" href="#world">World</a></h2>
+<p>A world is the game you are creating. This includes all <a href="../projects/settings/../zones.html">zones</a>, and <a href="../projects/commands.html">commands</a>.</p>
+<h2 id="asset-store"><a class="header" href="#asset-store">Asset Store</a></h2>
+<p>An asset store is like a directory. It contains 0 or more <a href="#assets">assets</a>.</p>
+<p>Worldsmith defines several asset stores which are used for specific things in your world. You can read more about these in the <a href="../projects/asset_stores.html">asset stores</a> section.</p>
+<h2 id="assets"><a class="header" href="#assets">Assets</a></h2>
+<p>An asset is an encrypted file which you can use in your world.</p>
+<p>Assets are stored in <a href="#asset-store">asset stores</a>.</p>
+<p>They can represent either a single file or a directory.</p>
+<p>Each asset is encrypted using Dart's <a href="https://pub.dev/packages/encrypt">encrypt</a> package, and each one uses a randomly generated encryption key, so no two are the same.</p>
+<p>Please note that while Worldsmith Studio does encrypt assets, no guarantees are given about the security of any assets you bundle with your <a href="#world">world</a>. The encryption keys for all assets are stored in plain text in your <a href="#project-file">project file</a>, and the encryption key for the encrypted world file is stored in plain text in the generated <a href="#game-directory">source code</a>. As such, if you give either the project file, or the generated source code to another person, they will be able to decrypt your world and its assets.</p>
+<p>Worldsmith Studio attempts to mitigate this by generating a new encryption key and re-encrypting your world file every time you build your world, but you are fully responsible for any content created with this program.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../welcome/welcome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../projects/creating_a_project.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../welcome/welcome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../projects/creating_a_project.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
     "Worldsmith"
-  ]
+  ],
+  "markdownlint.config": {
+    "MD025": false
+  }
 }

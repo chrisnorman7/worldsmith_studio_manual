@@ -1,6 +1,30 @@
 # Summary
 
-- [Introduction](introduction.md)
-- [Chapter 1: Core Concepts](chapter_1.md)
-- [Chapter 2: Creating A Project](chapter_2.md)
-- [Chapter 3: Opening A Project](chapter_3.md)
+# Introduction
+
+- [Welcome](welcome/welcome.md)
+- [Core Concepts](welcome/concepts.md)
+
+# Creating And Opening Projects
+
+- [Creating A Project](projects/creating_a_project.md)
+- [Opening A Project](projects/opening_a_project.md)
+
+# Editing Projects
+
+- [Navigating The Interface](projects/navigating_the_interface.md)
+- [World Options](projects/world_options.md)
+- [Commands](projects/commands.md)
+- [Zones](projects/zones.md)
+- [Terrain Types](projects/terrain_types.md)
+- [Asset Stores](projects/asset_stores.md)
+- [Reverb Presets](projects/reverb_presets.md)
+- [Sound Settings](projects/sound_settings.md)
+- [Menus](projects/menus.md)
+- [More](projects/more.md)
+
+# Appendices
+
+- [Appendix 1: Building Projects](appendices/building_projects.md)
+- [Appendix 2: Scripting](appendices/scripting.md)
+- [Acknowledgements](acknowledgements.md)

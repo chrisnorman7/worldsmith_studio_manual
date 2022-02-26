@@ -1,4 +1,4 @@
-# Chapter 3: Opening A Project
+# Opening A Project
 
 When a project has been created, the main menu of Worldsmith Studio will change to show a list of recently-opened projects.
 

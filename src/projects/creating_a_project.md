@@ -1,4 +1,4 @@
-# Chapter 2: Creating A Project
+# Creating A Project
 
 When you run Worldsmith Studio for the first time, you will see a screen with buttons for creating and opening projects.
 
