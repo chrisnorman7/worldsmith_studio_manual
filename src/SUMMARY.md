@@ -25,6 +25,8 @@
 
 # Appendices
 
-- [Appendix 1: Building Projects](appendices/building_projects.md)
-- [Appendix 2: Scripting](appendices/scripting.md)
+- [Appendix 1: Installing worldsmith](appendices/installing_worldsmith.md)
+- [Appendix 2: Playing Projects](appendices/playing_projects.md)
+- [Appendix 3: Building Projects](appendices/building_projects.md)
+- [Appendix 4: Scripting](appendices/scripting.md)
 - [Acknowledgements](acknowledgements.md)
