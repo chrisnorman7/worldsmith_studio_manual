@@ -150,7 +150,7 @@
 <h3 id="windows-extras"><a class="header" href="#windows-extras">Windows Extras</a></h3>
 <p>By default, when building an EXE from a dart file under WIndows, a console window is opened when running the resulting EXE file. For a game, this is undesirable.</p>
 <p>The <code>worldsmith</code> build command gets around this by calling a program called <code>editbin</code>. If you want this to happen automatically, ensure <code>editbin</code> is installed and available on your path.</p>
-<!-- According to [this page](https://developercommunity.visualstudio.com/t/find-package-that-contains-the-specfied-tool/943074#T-N943843), this is achieved by installing [Visual Studio](https://visualstudio.microsoft.com/), and including the [MSVC Command Line Toolset](https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line). -->
+<p>According to <a href="https://developercommunity.visualstudio.com/t/find-package-that-contains-the-specfied-tool/943074#T-N943843">this page</a>, this is achieved by installing <a href="https://visualstudio.microsoft.com/">Visual Studio</a>, and including the <a href="https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line">MSVC Command Line Toolset</a>.</p>
 <p>In practise, Visual Studio's installer can be somewhat opaque, and it's worth installing more than you need to make sure you've got everything covered.</p>
 <p>Next, you need to make sure <code>editbin</code> is in your path. The quickest way to do that is to go into a Microsoft Visual Studio Command Prompt (which you can find in your start menu).</p>
 <p>Alternatively, modify your path, and include the path to the <code>vcvars64.bat</code> script. It will be located in a path like <code>C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build</code>. Then you can just type <code>vcvars64</code>. You should see output like the following:</p>
@@ -192,6 +192,98 @@ usage: EDITBIN [options] [files]
       /TSAWARE[:NO]
       /VERSION:#[.#]
 </code></pre>
+<h2 id="change-directory"><a class="header" href="#change-directory">Change Directory</a></h2>
+<p>Change to the directory where you project is stored. On most operating systems this is achieved with the <code>cd</code> command.</p>
+<pre><code class="language-shell">cd c:\Users\chris\src\RPG
+</code></pre>
+<p>This directory should have your asset stores directory, and your project's JSON file.</p>
+<h2 id="gather-libraries"><a class="header" href="#gather-libraries">Gather Libraries</a></h2>
+<p>In order to run, the <code>worldsmith</code> command needs at least 2 libraries:</p>
+<ul>
+<li><a href="https://github.com/synthizer/synthizer/">synthizer</a></li>
+<li><a href="https://libsdl.org/">SDL2</a></li>
+<li>Optionally, if you are using assets that are neither in was or MP3 format: <a href="http://www.mega-nerd.com/libsndfile/">libsndfile</a> should be included.</li>
+</ul>
+<p>You can find all of these libraries for your platform in the Worldsmith Studio directory.</p>
+<h2 id="performing-build"><a class="header" href="#performing-build">Performing Build</a></h2>
+<p>Now we can use the <code>worldsmith</code> command to build our project:</p>
+<pre><code class="language-shell"># worldsmith build
+World: Untitled World
+Creating directory game.
+Writing world to game\world.data.
+Encryption key 4fcrN6V8yi3gSS5RDG7ZCi/tcu1mUQ30QPrUkRtbQdg= written to game\world.key.
+Generating dart code.
+Creating game using template console-simple...
+
+  .gitignore
+  analysis_options.yaml
+  CHANGELOG.md
+  pubspec.yaml
+  README.md
+  bin\game.dart
+
+Created project game in game! In order to get started, run the following commands:
+
+  cd game
+  dart run
+
+
+Resolving dependencies in game...
++ args 2.3.0
++ asn1lib 1.1.0
++ clock 1.1.0
++ collection 1.15.0
++ convert 3.0.1
++ crypto 3.0.1
++ dart_sdl 0.8.8
++ encrypt 5.0.1
++ ffi 1.1.2
++ js 0.6.4
++ json_annotation 4.4.0
++ lints 1.0.1
++ meta 1.7.0
++ path 1.8.1
++ pointycastle 3.5.1
++ typed_data 1.3.0
++ ziggurat 0.40.2
+Changed 17 dependencies in game!
+
+Resolving dependencies in game...
++ dart_synthizer 0.7.7
++ matcher 0.12.11
++ quiver 3.0.1+1
++ stack_trace 1.10.0
++ ziggurat_sounds 0.20.0
+Changed 5 dependencies in game!
+
+Resolving dependencies in game...
+Got dependencies in game!
+
+Resolving dependencies in game...
+Got dependencies in game!
+
+Resolving dependencies in game...
++ open_url 2.0.0
++ worldsmith 0.16.0
+Changed 2 dependencies in game!
+
+Copying assets...
+Assets: 0.
+Info: Compiling with sound null safety
+Generated: c:\users\chris\src\rpg\game\game.exe
+
+There was an error running the `editbin` command. Ensure you have it in your path.
+If you have Visual Studio installed, try locating and running the `vcvars64.bat` file.
+Build complete.
+Place the sdl dynamic library file inside the `game` directory.
+Place the synthizer dynamic library file inside the `game` directory.
+If desired, place the libsndfile dynamic library file inside the `game` directory.
+When making a release, the following files must be included:
+  game\assets
+  game\game.exe
+  game\world.data
+</code></pre>
+<p>You can include other files in your release, see <code>worldsmith build -h</code> for details.</p>
 
                     </main>
 
