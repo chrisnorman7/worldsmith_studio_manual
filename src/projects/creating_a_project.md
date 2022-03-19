@@ -8,7 +8,7 @@ To create a project, you can click the "Create Project" button, or use the keybo
 
 ![A screenshot showing a "Create Project" dialogue with a filename of project.json.](images/create_project_dialogue.png)
 
-It is recommended that you stick with the default filename `project.json`, but this is not enforced. Also, you can safely rename your project file any time it is not open in Worldsmith Studio.
+It is recommended that you stick with the default filename `project.json`, but this is not enforced. Also, you can safely rename your project file any time it is *not* open in Worldsmith Studio.
 
 When you have selected a directory, and given your project a filename, you will be taken to the project settings for your new project.
 

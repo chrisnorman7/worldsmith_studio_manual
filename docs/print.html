@@ -165,7 +165,7 @@
 <p>A project consists of a few things:</p>
 <h3 id="project-file"><a class="header" href="#project-file">Project File</a></h3>
 <p>This is a single file which is stored as <a href="https://www.json.org/">JSON</a>. It holds the information about your world.</p>
-<p>You can open this file in any standard text editor, although you are entirely responsible for any damage to your project arising from making edits to it.</p>
+<p>You can open this file in any standard text editor, although you are entirely responsible for any damage to your project arising from making edits to it outside of the official Worldsmith Studio editor.</p>
 <h3 id="assets-directory"><a class="header" href="#assets-directory">Assets Directory</a></h3>
 <p>This is the directory where your sound files will be encrypted and stored.</p>
 <p>It will contain sequentially numbered files and directories.</p>
@@ -181,15 +181,15 @@
 <p>An asset is an encrypted file which you can use in your world.</p>
 <p>Assets are stored in <a href="welcome/concepts.html#asset-store">asset stores</a>.</p>
 <p>They can represent either a single file or a directory.</p>
-<p>Each asset is encrypted using Dart's <a href="https://pub.dev/packages/encrypt">encrypt</a> package, and each one uses a randomly generated encryption key, so no two are the same.</p>
+<p>Each asset is encrypted using Dart's <a href="https://pub.dev/packages/encrypt">encrypt</a> package, and each one uses a randomly generated encryption key, so no two encryption keys are the same.</p>
 <p>Please note that while Worldsmith Studio does encrypt assets, no guarantees are given about the security of any assets you bundle with your <a href="welcome/concepts.html#world">world</a>. The encryption keys for all assets are stored in plain text in your <a href="welcome/concepts.html#project-file">project file</a>, and the encryption key for the encrypted world file is stored in plain text in the generated <a href="welcome/concepts.html#game-directory">source code</a>. As such, if you give either the project file, or the generated source code to another person, they will be able to decrypt your world and its assets.</p>
-<p>Worldsmith Studio attempts to mitigate this by generating a new encryption key and re-encrypting your world file every time you build your world, but you are fully responsible for any content created with this program.</p>
+<p>Worldsmith Studio attempts to mitigate this by generating a new encryption key and re-encrypting your world file every time you build your world, but you are fully responsible for any content created with the program.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-project"><a class="header" href="#creating-a-project">Creating A Project</a></h1>
 <p>When you run Worldsmith Studio for the first time, you will see a screen with buttons for creating and opening projects.</p>
 <p><img src="projects/images/no_project.png" alt="A screenshot of Worldsmith Studio with no recently-opened projects." /></p>
 <p>To create a project, you can click the &quot;Create Project&quot; button, or use the keyboard shortcut Control + N. You will see an appropriate dialogue for creating a file on your operating system.</p>
 <p><img src="projects/images/create_project_dialogue.png" alt="A screenshot showing a &quot;Create Project&quot; dialogue with a filename of project.json." /></p>
-<p>It is recommended that you stick with the default filename <code>project.json</code>, but this is not enforced. Also, you can safely rename your project file any time it is not open in Worldsmith Studio.</p>
+<p>It is recommended that you stick with the default filename <code>project.json</code>, but this is not enforced. Also, you can safely rename your project file any time it is <em>not</em> open in Worldsmith Studio.</p>
 <p>When you have selected a directory, and given your project a filename, you will be taken to the project settings for your new project.</p>
 <p><img src="projects/images/newly_created_project.png" alt="A screenshot showing Worldsmith Studio's project settings. The title of the world is &quot;Untitled World&quot;." /></p>
 <p>If you want to close your project and return to the main menu, you can click the back button, or press Control + W.</p>
@@ -200,7 +200,7 @@
 <p>You can click any of these files to open them, or choose a file from somewhere else by clicking the &quot;Open Project&quot; button or pressing Control + O.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="navigating-the-interface"><a class="header" href="#navigating-the-interface">Navigating The Interface</a></h1>
 <p>Worldsmith Studio has a lot of different screens. Every attempt has been made to ensure easy and consistent navigation across the different parts of the interface.</p>
-<p>If you find this not to be the case, please submit an issue.</p>
+<p>If you find this not to be the case, please <a href="https://github.com/chrisnorman7/worldsmith_studio/issues/new">submit an issue</a>.</p>
 <h2 id="tabbed-screens"><a class="header" href="#tabbed-screens">Tabbed Screens</a></h2>
 <p>Many screens - most notably the main project screen - use tabs to provide an overview and context. You can navigate through these types of screens in several ways:</p>
 <h3 id="mouse-or-keyboard"><a class="header" href="#mouse-or-keyboard">Mouse Or Keyboard</a></h3>
@@ -232,8 +232,17 @@
 <li>Control + Down Arrow: Move south.</li>
 <li>Control + Left Arrow: Move West.</li>
 </ul>
+<h2 id="searchable-lists"><a class="header" href="#searchable-lists">Searchable Lists</a></h2>
+<p>In many places, a searchable list is used.</p>
+<ul>
+<li>While typing in the search box, the number of search results will appear in brackets.</li>
+<li>The first control in the tab order after the search field is a &quot;Clear&quot; button, which will clear the search field, and return your focus to it.</li>
+<li>When moving through the search results, you can press the slash (/) key to return to the search field.</li>
+</ul>
+<h2 id="selection-buttons"><a class="header" href="#selection-buttons">Selection buttons</a></h2>
+<p>In places where a button will select from a list (commands, scenes, ETC), you can press Control + E to edit the selected item, rather than changing the selection.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="world-options"><a class="header" href="#world-options">World Options</a></h1>
-<p>The world</p>
+<p>The world options screen allows you to configure basic settings for your project.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="commands"><a class="header" href="#commands">Commands</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="zones"><a class="header" href="#zones">Zones</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="terrain-types"><a class="header" href="#terrain-types">Terrain Types</a></h1>

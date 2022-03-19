@@ -1,3 +1,3 @@
 # World Options
 
-The world
+The world options screen allows you to configure basic settings for your project.

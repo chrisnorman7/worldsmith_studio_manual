@@ -24,7 +24,7 @@ A project consists of a few things:
 
 This is a single file which is stored as [JSON](https://www.json.org/). It holds the information about your world.
 
-You can open this file in any standard text editor, although you are entirely responsible for any damage to your project arising from making edits to it.
+You can open this file in any standard text editor, although you are entirely responsible for any damage to your project arising from making edits to it outside of the official Worldsmith Studio editor.
 
 ### Assets Directory
 
@@ -56,8 +56,8 @@ Assets are stored in [asset stores](#asset-store).
 
 They can represent either a single file or a directory.
 
-Each asset is encrypted using Dart's [encrypt](https://pub.dev/packages/encrypt) package, and each one uses a randomly generated encryption key, so no two are the same.
+Each asset is encrypted using Dart's [encrypt](https://pub.dev/packages/encrypt) package, and each one uses a randomly generated encryption key, so no two encryption keys are the same.
 
 Please note that while Worldsmith Studio does encrypt assets, no guarantees are given about the security of any assets you bundle with your [world](#world). The encryption keys for all assets are stored in plain text in your [project file](#project-file), and the encryption key for the encrypted world file is stored in plain text in the generated [source code](#game-directory). As such, if you give either the project file, or the generated source code to another person, they will be able to decrypt your world and its assets.
 
-Worldsmith Studio attempts to mitigate this by generating a new encryption key and re-encrypting your world file every time you build your world, but you are fully responsible for any content created with this program.
+Worldsmith Studio attempts to mitigate this by generating a new encryption key and re-encrypting your world file every time you build your world, but you are fully responsible for any content created with the program.

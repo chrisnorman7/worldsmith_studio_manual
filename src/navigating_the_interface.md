@@ -2,7 +2,7 @@
 
 Worldsmith Studio has a lot of different screens. Every attempt has been made to ensure easy and consistent navigation across the different parts of the interface.
 
-If you find this not to be the case, please submit an issue.
+If you find this not to be the case, please [submit an issue](https://github.com/chrisnorman7/worldsmith_studio/issues/new).
 
 ## Tabbed Screens
 
@@ -51,3 +51,15 @@ When editing [zones](../projects/zones.md), you can move through the zone when y
 - Control + Right Arrow: Move east.
 - Control + Down Arrow: Move south.
 - Control + Left Arrow: Move West.
+
+## Searchable Lists
+
+In many places, a searchable list is used.
+
+- While typing in the search box, the number of search results will appear in brackets.
+- The first control in the tab order after the search field is a "Clear" button, which will clear the search field, and return your focus to it.
+- When moving through the search results, you can press the slash (/) key to return to the search field.
+
+## Selection buttons
+
+In places where a button will select from a list (commands, scenes, ETC), you can press Control + E to edit the selected item, rather than changing the selection.
