@@ -1,11 +1,12 @@
 # Commands
 
-Commands in world smith studio can almost be compared to what it is in the reel world:
-Just like you can command someone to do something or give a command to a program, you can do the same in world smith studio.
+Commands in world smith studio can almost be compared to what it is in the reel world: Just like you can command someone to do something or give a command to a program, you can do the same in world smith studio.
+
+Commands are made up of a set of "instructions", which can affect your player and their world in different ways.
 
 ## Available instructions
 
-- Set current zone: Used to set the current zone for the player.
+- Set current zone: Used to set the current zone and / or coordinates for the player.
 - Change walking mode: changes the walking mode of the player.
 - Set quest stage: used to update quest progress.
 - Call commands: calls any other created command.
