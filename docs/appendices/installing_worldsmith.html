@@ -165,6 +165,37 @@
 <p>Please be aware that there may be conflicts between the Git version of the worldsmith package, and the stable version of Worldsmith Studio.</p>
 <h2 id="which-version-should-i-choose"><a class="header" href="#which-version-should-i-choose">Which Version Should I Choose?</a></h2>
 <p>As a general rule, if you are beta testing Worldsmith Studio, install from <a href="#installing-from-git">git</a>. If you are using the current stable release of Worldsmith Studio, use the version from <a href="#installing-with-pub">pub</a>.</p>
+<h2 id="installing-worldsmith-studio"><a class="header" href="#installing-worldsmith-studio">Installing Worldsmith Studio</a></h2>
+<h2 id="stable-version"><a class="header" href="#stable-version">Stable Version</a></h2>
+<p>If you are happy to use the latest (mostly) stable version of Worldsmith Studio, you can find binaries for Windows on the <a href="https://github.com/chrisnorman7/worldsmith_studio/releases/latest">releases page</a>.</p>
+<p>Other platforms can be added, probably with some help, although I have no real means of testing these.</p>
+<h3 id="running-from-source"><a class="header" href="#running-from-source">Running From Source</a></h3>
+<p>To use the latest version, ensure you have both <a href="https://dart.dev/">Dart</a> and <a href="https://flutter.dev/">Flutter</a> installed. You will also need the <a href="https://git-scm.com/">git</a> command in your path.</p>
+<h4 id="clone-repositories"><a class="header" href="#clone-repositories">Clone Repositories</a></h4>
+<p>Firstly, clone the repositories for both <a href="https://github.com/chrisnorman7/worldsmith">worldsmith</a> and <a href="https://github.com/chrisnorman7/worldsmith_studio">Worldsmith Studio</a>:</p>
+<pre><code class="language-shell">git clone https://github.com/chrisnorman7/worldsmith
+git clone https://github.com/chrisnorman7/worldsmith_studio
+</code></pre>
+<p>It is important that both these repositories are cloned into the same directory, and that you have write access to this directory. To be sure, simply clone inside your home directory (Mac OS and Linux) or user profile directory (Windows).</p>
+<h4 id="get-packages"><a class="header" href="#get-packages">Get Packages</a></h4>
+<p>Change into both directories, and get packages.</p>
+<p>For <code>worldsmith</code>, you will need to use <code>dart pub get</code>, because it is a package. For <code>worldsmith_studio</code>, use <code>flutter pub get</code> because it is a Flutter project.</p>
+<pre><code class="language-shell">cd worldsmith
+dart pub get
+cd ../worldsmith_studio
+flutter pub get
+</code></pre>
+<p>It is worth checking that your <code>worldsmith</code> repository is as up to date as it can be, since both it and Worldsmith Studio are in such a state of flux while they are so heavily under development.</p>
+<p>You could do this with the following scripts:</p>
+<h5 id="windows"><a class="header" href="#windows">Windows</a></h5>
+<pre><code class="language-shell">@echo off
+cd ..\worldsmith &amp; git pull &amp; cd ..\worldsmith_studio &amp; git pull &amp; flutter run -d windows
+</code></pre>
+<h5 id="mac-os--linux"><a class="header" href="#mac-os--linux">Mac OS / Linux</a></h5>
+<pre><code class="language-shell">cd ../worldsmith &amp;&amp; git pull &amp;&amp; cd ../worldsmith_studio &amp;&amp; git pull &amp;&amp; flutter run -d &lt;platform&gt;
+</code></pre>
+<h5 id="generic"><a class="header" href="#generic">Generic</a></h5>
+<p>You can omit the <code>-d &lt;platform&gt;</code> argument from the <code>flutter run</code> command, and it should still give you a desktop app depending on your system setup.</p>
 
                     </main>
 

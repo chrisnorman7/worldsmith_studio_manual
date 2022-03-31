@@ -43,3 +43,60 @@ Please be aware that there may be conflicts between the Git version of the world
 ## Which Version Should I Choose?
 
 As a general rule, if you are beta testing Worldsmith Studio, install from [git](#installing-from-git). If you are using the current stable release of Worldsmith Studio, use the version from [pub](#installing-with-pub).
+
+## Installing Worldsmith Studio
+
+## Stable Version
+
+If you are happy to use the latest (mostly) stable version of Worldsmith Studio, you can find binaries for Windows on the [releases page](https://github.com/chrisnorman7/worldsmith_studio/releases/latest).
+
+Other platforms can be added, probably with some help, although I have no real means of testing these.
+
+### Running From Source
+
+To use the latest version, ensure you have both [Dart](https://dart.dev/) and [Flutter](https://flutter.dev/) installed. You will also need the [git](https://git-scm.com/) command in your path.
+
+#### Clone Repositories
+
+Firstly, clone the repositories for both [worldsmith](https://github.com/chrisnorman7/worldsmith) and [Worldsmith Studio](https://github.com/chrisnorman7/worldsmith_studio):
+
+```shell
+git clone https://github.com/chrisnorman7/worldsmith
+git clone https://github.com/chrisnorman7/worldsmith_studio
+```
+
+It is important that both these repositories are cloned into the same directory, and that you have write access to this directory. To be sure, simply clone inside your home directory (Mac OS and Linux) or user profile directory (Windows).
+
+#### Get Packages
+
+Change into both directories, and get packages.
+
+For `worldsmith`, you will need to use `dart pub get`, because it is a package. For `worldsmith_studio`, use `flutter pub get` because it is a Flutter project.
+
+```shell
+cd worldsmith
+dart pub get
+cd ../worldsmith_studio
+flutter pub get
+```
+
+It is worth checking that your `worldsmith` repository is as up to date as it can be, since both it and Worldsmith Studio are in such a state of flux while they are so heavily under development.
+
+You could do this with the following scripts:
+
+##### Windows
+
+```shell
+@echo off
+cd ..\worldsmith & git pull & cd ..\worldsmith_studio & git pull & flutter run -d windows
+```
+
+##### Mac OS / Linux
+
+```shell
+cd ../worldsmith && git pull && cd ../worldsmith_studio && git pull && flutter run -d <platform>
+```
+
+##### Generic
+
+You can omit the `-d <platform>` argument from the `flutter run` command, and it should still give you a desktop app depending on your system setup.
