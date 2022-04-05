@@ -111,3 +111,9 @@ cd ../worldsmith && git pull && cd ../worldsmith_studio && git pull && flutter r
 ##### Generic
 
 You can omit the `-d <platform>` argument from the `flutter run` command, and it should still give you a desktop app depending on your system setup.
+
+#### Running The Program
+
+To run the program, type `flutter run`.
+
+If you have multiple devices connected, Flutter should show you a list. Choose the appropriate device for your platform.
