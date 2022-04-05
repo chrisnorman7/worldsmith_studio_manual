@@ -117,3 +117,36 @@ You can omit the `-d <platform>` argument from the `flutter run` command, and it
 To run the program, type `flutter run`.
 
 If you have multiple devices connected, Flutter should show you a list. Choose the appropriate device for your platform.
+
+If everything worked correctly, you should see output like the following:
+
+```shell
+Launching lib\main.dart on Windows in debug mode...
+Building Windows application...
+Syncing files to device Windows...                                 110ms
+
+Flutter run key commands.
+r Hot reload.
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+ Running with sound null safety
+
+An Observatory debugger and profiler on Windows is available at: http://127.0.0.1:2858/QHgqXPo4AOA=/
+The Flutter DevTools debugger and profiler on Windows is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:2858/QHgqXPo4AOA=/
+```
+
+#### Quitting The Program
+
+To close Worldsmith Studio, either switch to your terminal and press the Q key as directed by the output, or simply close Worldsmith Studio normally.
+
+Be advised that if you close Worldsmith Studio like other programs, you will see the following message:
+
+```shell
+Lost connection to device.
+```
+
+This is not a bug, it is a standard Flutter message.
