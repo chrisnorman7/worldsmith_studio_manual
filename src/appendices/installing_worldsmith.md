@@ -56,6 +56,17 @@ Other platforms can be added, probably with some help, although I have no real m
 
 To use the latest version, ensure you have both [Dart](https://dart.dev/) and [Flutter](https://flutter.dev/) installed. You will also need the [git](https://git-scm.com/) command in your path.
 
+For best results, use flutter from the master channel. Worldsmith Studio may work with the beta channel, but for best results, master should be used.
+
+To update flutter to the master branch, issue the following commands:
+
+```shell
+flutter channel master
+flutter upgrade
+```
+
+Also, `flutter upgrade` should be rerun periodically, to ensure Dart and Flutter are both up to date.
+
 #### Clone Repositories
 
 Firstly, clone the repositories for both [worldsmith](https://github.com/chrisnorman7/worldsmith) and [Worldsmith Studio](https://github.com/chrisnorman7/worldsmith_studio):
