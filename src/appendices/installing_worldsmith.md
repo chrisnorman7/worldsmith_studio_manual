@@ -40,6 +40,14 @@ dart pub global activate -s git --overwrite https://github.com/chrisnorman7/worl
 
 Please be aware that there may be conflicts between the Git version of the worldsmith package, and the stable version of Worldsmith Studio.
 
+### Using Local Copy
+
+If you have cloned the worldsmith repository, you can add the included `bin` directory in your path. Under Windows, there is a script called `worldsmith-source`, which you can use to ensure you are always using the latest version of the command.
+
+Unfortunately, this script has not yet been ported to other platforms.
+
+How to modify your system path is beyond the scope of this manual.
+
 ## Which Version Should I Choose?
 
 As a general rule, if you are beta testing Worldsmith Studio, install from [git](#installing-from-git). If you are using the current stable release of Worldsmith Studio, use the version from [pub](#installing-with-pub).
