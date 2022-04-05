@@ -52,6 +52,8 @@ How to modify your system path is beyond the scope of this manual.
 
 As a general rule, if you are beta testing Worldsmith Studio, install from [git](#installing-from-git). If you are using the current stable release of Worldsmith Studio, use the version from [pub](#installing-with-pub).
 
+If you don't want to do either of these things, you can either use a relative path when executing the `worldsmith` command, or you can use the `worldsmith-source` script if you are running Windows.
+
 ## Installing Worldsmith Studio
 
 ## Stable Version
